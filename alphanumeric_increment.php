@@ -1,7 +1,8 @@
 <?php
 
 function increment($alphanum) {
-    $alphanum = preg_replace("/[^A-Za-z0-9]/", '', $alphanum) == "" ? "0" : $alphanum;
+    $alphanum = preg_replace("/[^A-Za-z0-9]/", '', $alphanum);
+    $alphanum = $alphanum == "" ? "0" : $alphanum;
     
     for ($i = strlen($alphanum) - 1; $i >= 0; --$i) {
         $c = $alphanum[$i];
